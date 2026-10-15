@@ -1,0 +1,60 @@
+site_name: pycaptcha-hub
+site_description: Унифицированная библиотека для решения капч на Python (RuCaptcha, 2Captcha, Anti-Captcha, CapMonster, GeeTest, reCAPTCHA Enterprise)
+site_author: Chu4hel
+repo_url: https://github.com/Chu4hel/pycaptcha-hub
+repo_name: Chu4hel/pycaptcha-hub
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на темную тему
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+
+nav:
+  - Главная: index.md
+  - Быстрый старт: quickstart.md
+  - Провайдеры и солверы: solvers.md
+  - GeeTest v4 / v3: geetest.md
+  - reCAPTCHA Enterprise: recaptcha_enterprise.md
+  - Исключения и ошибки: exceptions.md
+  - Справочник API: api.md
