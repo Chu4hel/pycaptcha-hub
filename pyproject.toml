@@ -1,0 +1,56 @@
+[project]
+name = "pycaptcha-hub"
+version = "0.1.0"
+description = "Universal async and sync Python client for popular captcha solving services (RuCaptcha/2Captcha, Anti-Captcha, CapMonster, GeeTest, ReCaptcha Enterprise)."
+readme = "README.md"
+authors = [
+    { name = "Chu4hel", email = "106600877+Chu4hel@users.noreply.github.com" }
+]
+license = "MIT"
+requires-python = ">=3.11"
+keywords = [
+    "captcha",
+    "anticaptcha",
+    "rucaptcha",
+    "2captcha",
+    "capmonster",
+    "geetest",
+    "recaptcha-enterprise",
+    "captcha-solver",
+]
+dependencies = [
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.28,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.10.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.5.0",
+]
+docs = [
+    "mkdocs-material>=9.5.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "strict"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
